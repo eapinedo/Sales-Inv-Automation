@@ -15,8 +15,12 @@ By eliminating manual data entry, this solution saves over 15 hours of manual wo
   * Queries SQL databases to track daily data warehouse updates.
   * Automatically generates and formats Excel reports using `pandas` and `xlsxwriter`.
   * Sends responsive HTML email alerts to stakeholders detailing processed dates, total sales, and pipeline health.
-  
+
+  **Email Alert Preview:**
   ![Automated Email Alert](https://github.com/eapinedo/PythonAutomations/blob/main/E-mail%20alert%20(Spanish).png?raw=true)
+
+  **Generated Excel Attachment:**
+  ![Excel report.png](https://github.com/eapinedo/Sales-Inventory-Automation/blob/main/Excel%20report.png?raw=true)
 
 * **Modular & Scalable Architecture:** Organized with clear separation of concerns (configuration, extraction, database connection, file management, and logging).
 
