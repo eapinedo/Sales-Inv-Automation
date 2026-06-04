@@ -14,6 +14,9 @@ By eliminating manual data entry, this solution saves over 15 hours of manual wo
   * Queries SQL databases to track daily data warehouse updates.
   * Automatically generates and formats Excel reports using `pandas` and `xlsxwriter`.
   * Sends responsive HTML email alerts to stakeholders detailing processed dates, total sales, and pipeline health.
+  
+  ![Automated Email Alert](https://github.com/eapinedo/PythonAutomations/blob/main/E-mail%20alert%20(Spanish).png?raw=true)
+
 * **Modular & Scalable Architecture:** Organized with clear separation of concerns (configuration, extraction, database connection, file management, and logging).
 
 ## 📂 Repository Structure
@@ -28,13 +31,13 @@ By eliminating manual data entry, this solution saves over 15 hours of manual wo
   * `file_manager.py`: Automated file routing and directory cleanup.
   * `logger_setup.py`: Standardized execution tracking and log formatting.
   * `app.py`: The reporting bot that queries the database, generates Excel attachments, and dispatches HTML emails.
-* [cite_start]`envio-alertas.bat`: Batch script for scheduling and executing the email alert bot.
-* [cite_start]`requirements.txt`: Project dependencies[cite: 2].
+* `envio-alertas.bat`: Batch script for scheduling and executing the email alert bot.
+* `requirements.txt`: Project dependencies.
 
 ## 🛠️ Tech Stack
 * **Language:** Python 3.x
-* [cite_start]**Data Manipulation:** Pandas [cite: 2][cite_start], Openpyxl[cite: 2], Xlsxwriter
-* [cite_start]**Database:** SQL Server, SQLAlchemy [cite: 2][cite_start], PyODBC [cite: 2]
+* **Data Manipulation:** Pandas, Openpyxl, Xlsxwriter
+* **Database:** SQL Server, SQLAlchemy, PyODBC
 * **Automation:** Windows Batch Scripting, Smtplib
 
 ## 🚀 Installation & Setup
