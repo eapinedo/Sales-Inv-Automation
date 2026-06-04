@@ -7,7 +7,8 @@ By eliminating manual data entry, this solution saves over 15 hours of manual wo
 
 ## ✨ Key Features
 
-* **High-Performance ETL Pipeline:** * Parses and loads daily sales/inventory records from various formats (CSV, Excel).
+* **High-Performance ETL Pipeline:**
+  * Parses and loads daily sales/inventory records from various formats (CSV, Excel).
   * Automatically handles data cleaning, decimal rounding, and intelligent date formatting.
   * Utilizes native Bulk Insert capabilities (via `PyODBC` and `SQLAlchemy`) for maximum database ingestion speed.
 * **Automated Data Reporting & Alerts:**
