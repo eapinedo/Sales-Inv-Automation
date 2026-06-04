@@ -45,5 +45,5 @@ By eliminating manual data entry, this solution saves over 15 hours of manual wo
 
 1. **Clone the repository:**
    ```bash
-   git clone [https://github.com/YourUsername/Sales-Inventory-Automation.git](https://github.com/YourUsername/Sales-Inventory-Automation.git)
+   git clone [https://github.com/eapinedo/Sales-Inventory-Automation.git](https://github.com/eapinedo/Sales-Inventory-Automation.git)
    cd Sales-Inventory-Automation
