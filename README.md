@@ -13,7 +13,7 @@ By eliminating manual data entry, this solution saves over 15 hours of manual wo
   * Utilizes native Bulk Insert capabilities (via `PyODBC` and `SQLAlchemy`) for maximum database ingestion speed.
     
   **Data ingestion Preview:**
-  ![Data ingestion](https://github.com/eapinedo/PythonAutomations/blob/main/Data%20ingestion.png?raw=true)
+  ![Data ingestion](https://github.com/eapinedo/PythonAutomations/blob/main/img/Data%20ingestion.png?raw=true)
     
 * **Automated Data Reporting & Alerts:**
   * Queries SQL databases to track daily data warehouse updates.
@@ -21,10 +21,10 @@ By eliminating manual data entry, this solution saves over 15 hours of manual wo
   * Sends responsive HTML email alerts to stakeholders detailing processed dates, total sales, and pipeline health.
 
   **Email Alert Preview:**
-  ![Automated Email Alert](https://github.com/eapinedo/PythonAutomations/blob/main/E-mail%20alert%20(Spanish).png?raw=true)
+  ![Automated Email Alert](https://github.com/eapinedo/PythonAutomations/blob/main/img/E-mail%20alert%20(Spanish).png?raw=true)
 
   **Generated Excel Attachment:**
-  ![Excel report](https://github.com/eapinedo/Sales-Inventory-Automation/blob/main/Excel%20report.png?raw=true)
+  ![Excel report](https://github.com/eapinedo/Sales-Inventory-Automation/blob/main/img/Excel%20report.png?raw=true)
 
 * **Modular & Scalable Architecture:** Organized with clear separation of concerns (configuration, extraction, database connection, file management, and logging).
 
