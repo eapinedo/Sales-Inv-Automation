@@ -24,6 +24,67 @@ By eliminating manual data entry, this solution saves over 15 hours of manual wo
 
 * **Modular & Scalable Architecture:** Organized with clear separation of concerns (configuration, extraction, database connection, file management, and logging).
 
+## 🧠 Implementation Highlights
+
+To ensure high data integrity and minimal manual intervention, both pipelines utilize dynamic Python capabilities and intelligent error handling.
+
+### 1. Intelligent Data Cleaning (`etl_engine.py`)
+
+The ETL engine automatically standardizes decimals and intercepts inconsistent date formats before they reach SQL Server:
+
+```python
+# Cleans comma separators, rounds to 4 decimals, and enforces YYYY-MM-DD
+df[col] = df[col].str.replace(',', '.', regex=False)
+df[col] = pd.to_numeric(df[col], errors='coerce').fillna(0.0).round(4)
+df[col] = pd.to_datetime(
+    df[col],
+    errors='coerce',
+    dayfirst=True
+).dt.strftime('%Y-%m-%d')
+```
+
+### 2. Smart File Routing (`main.py`)
+
+The orchestrator differentiates between critical database failures and simple syntax errors to prevent data loss:
+
+```python
+# Detects DB crashes vs. syntax errors and routes files accordingly
+if any(palabra in mensaje_error for palabra in errores_db):
+    logger.warning("   ├─ [!] Critical Database Error detected.")
+    logger.warning(
+        f"   └─ Moving file to error folder: {carpeta_errores}"
+    )
+    mover_archivo(archivo_input, carpeta_errores)
+```
+
+### 3. Dynamic Email Generation & Secure Dispatch (`app.py` & `sendmail.py`)
+
+The alerting bot dynamically converts SQL query results into styled HTML tables. It then attaches generated Excel reports and securely dispatches them via SMTP using TLS encryption:
+
+```python
+# Convert SQL query results into an HTML table
+df = pd.read_sql_query(query, con=conn)
+contenido_html += df.to_html(index=False, classes='table')
+
+# Attach Excel report and send via secure SMTP
+message.attach(MIMEText(contenido_html, 'html'))
+message.attach(
+    MIMEApplication(
+        fil.read(),
+        Name=basename(filename)
+    )
+)
+
+with smtplib.SMTP(smtp, port) as server:
+    server.starttls()
+    server.login(sender_email, pwd)
+    server.sendmail(
+        sender_email,
+        toaddrs,
+        message.as_string()
+    )
+```
+
 ## 📂 Repository Structure
 
 * `config/`: Contains `config.json` for database credentials, target schemas, and file routing logic.
@@ -45,9 +106,8 @@ By eliminating manual data entry, this solution saves over 15 hours of manual wo
 * **Database:** SQL Server, SQLAlchemy, PyODBC
 * **Automation:** Windows Batch Scripting, Smtplib
 
-## 🚀 Installation & Setup
+## 📈 Business Impact
 
-1. **Clone the repository:**
-   ```bash
-   git clone [https://github.com/eapinedo/Sales-Inventory-Automation.git](https://github.com/eapinedo/Sales-Inventory-Automation.git)
-   cd Sales-Inventory-Automation
+* **Efficiency:** Eradicated manual ETL processing, reclaiming 15+ hours/week for the analytics team.
+* **Visibility:** Automated daily email triggers give stakeholders immediate confirmation of data warehouse health and distributor status.
+* **Reliability:** Built-in rollback mechanisms, transaction safety (ACID compliance), and intelligent file archiving prevent data corruption and accidental duplication.
