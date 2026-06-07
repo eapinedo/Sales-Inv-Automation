@@ -118,3 +118,13 @@ with smtplib.SMTP(smtp, port) as server:
 * **Efficiency:** Eradicated manual ETL processing, reclaiming 15+ hours/week for the analytics team.
 * **Visibility:** Automated daily email triggers give stakeholders immediate confirmation of data warehouse health and distributor status.
 * **Reliability:** Built-in rollback mechanisms, transaction safety (ACID compliance), and intelligent file archiving prevent data corruption and accidental duplication.
+
+## 📄 License
+
+<div align="center">
+
+MIT License © [Emilio Pinedo](LICENSE)
+
+<img src="https://capsule-render.vercel.app/api?type=waving&color=gradient&height=100&section=footer" width="100%"/>
+
+</div>
