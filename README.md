@@ -123,7 +123,7 @@ with smtplib.SMTP(smtp, port) as server:
 
 <div align="center">
 
-MIT License © [Emilio Pinedo](LICENSE)
+MIT License © [Emilio Pinedo](LICENSE.txt)
 
 <img src="https://capsule-render.vercel.app/api?type=waving&color=gradient&height=100&section=footer" width="100%"/>
 
