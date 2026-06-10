@@ -1,4 +1,4 @@
-# Python & SQL Automation Solutions for Sales & Inventory Data
+![Banner](https://capsule-render.vercel.app/api?type=waving&height=160&color=gradient&text=Python%20and%20Automation%20Solutions&fontSize=40&fontAlign=50&animation=fadeIn&fontAlignY=30)
 
 ## 📖 Project Overview
 This repository contains a robust, dual-purpose automation suite designed to streamline data operations for Modern Trade sales. Built with Python and SQL, the project consists of two core modules: an **Automated ETL Pipeline** for daily sales records and an **Automated Alerting System** for data warehouse tracking. 
