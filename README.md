@@ -14,7 +14,7 @@ By eliminating manual data entry, this solution saves over 15 hours of manual wo
     
   **Data Ingestion Preview:**
   
-  <img src="https://github.com/eapinedo/PythonAutomations/blob/main/img/Data%20ingestion.png?raw=true" width="600" alt="Data ingestion">
+  <img src="https://github.com/eapinedo/Sales-Inv-Automation/blob/main/img/Data%20ingestion.png?raw=true" width="600" alt="Data ingestion">
     
 * **Automated Data Reporting & Alerts:**
   * Queries SQL databases to track daily data warehouse updates.
@@ -23,7 +23,7 @@ By eliminating manual data entry, this solution saves over 15 hours of manual wo
 
   **Email Alert Preview:**
   
-  <img src="https://github.com/eapinedo/PythonAutomations/blob/main/img/E-mail%20alert%20(Spanish).png?raw=true" width="600" alt="Automated Email Alert">
+  <img src="https://github.com/eapinedo/Sales-Inv-Automation/blob/main/img/E-mail%20alert%20(Spanish).png?raw=true" width="600" alt="Automated Email Alert">
 
   **Generated Excel Attachment:**
   
@@ -123,7 +123,7 @@ with smtplib.SMTP(smtp, port) as server:
 
 <div align="center">
 
-MIT License © [Emilio Pinedo](LICENSE.txt)
+MIT License © <a href="https://github.com/eapinedo/Sales-Inv-Automation/blob/main/LICENSE.txt">Emilio Pinedo</a>
 
 <img src="https://capsule-render.vercel.app/api?type=waving&color=gradient&height=100&section=footer" width="100%"/>
 
