@@ -99,11 +99,12 @@ with smtplib.SMTP(smtp, port) as server:
 * `output/`: Auto-generated directories (`procesados/`, `errores/`, `logs/`) for post-processing file management.
 * `src/`: Core logic and Python modules.
   * `main.py`: The main orchestrator for the ETL process.
-  * `etl_engine.py`: Pandas-driven data transformation, cleaning, and dynamic column generation.
+  * **[`etl_engine.py`](https://github.com/eapinedo/Sales-Inv-Automation/blob/main/py/etl_engine.py):** Pandas-driven data transformation, cleaning, and dynamic column generation. --> include the link here
   * `db_connection.py`: Secure SQL Server connections, transaction management, and ultra-fast bulk insertions.
   * `file_manager.py`: Automated file routing and directory cleanup.
   * `logger_setup.py`: Standardized execution tracking and log formatting.
   * `app.py`: The reporting bot that queries the database, generates Excel attachments, and dispatches HTML emails.
+  * **[`sendmail.py`](https://github.com/eapinedo/Sales-Inv-Automation/blob/main/py/sendmail.py):** Handles secure SMTP dispatch and TLS encryption for automated email alerts.
 * `envio-alertas.bat`: Batch script for scheduling and executing the email alert bot.
 * `requirements.txt`: Project dependencies.
 
